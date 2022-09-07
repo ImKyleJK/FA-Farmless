@@ -1,0 +1,335 @@
+:root {
+  --PrimaryColour: #00A36C;
+  --SecondaryColour: #008458;
+  --LinkColour: #000000;
+  --TextColour: #000000;
+  --SpinnerSpeed: 2000ms; 
+}
+
+/* ============================== */
+/*              FONTS             */
+/* ============================== */
+@import url('fonts.googleapis.com/css2?family=Staatliches&family=Viga&display=swap');
+/* ============================== */
+
+
+
+/* ============================== */
+/*         GLOBAL CHANGES         */
+/* ============================== */
+* {
+  margin: auto;
+  padding: auto;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-animation-delay: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*         PAGE LOADER            */
+/* ============================== */
+#loader {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 990;
+  background-color: var(--PrimaryColour);
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+}
+#loader img{
+  height: auto;
+  width: 5%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: var(--SpinnerSpeed);
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: var(--SpinnerSpeed);
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: var(--SpinnerSpeed);
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: var(--SpinnerSpeed);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*           ANIMATIONS           */
+/* ============================== */
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*           Navigation          */
+/* ============================== */
+#navigation {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--PrimaryColour);
+  border-bottom-style: solid;
+  border-width: 2.3vh;
+  border-color: var(--SecondaryColour);
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  clear: both;
+  display: block;
+}
+/* Nav Sides ===================== */
+#navigation .LNav {
+  display: inline;
+  left:0;
+  float: left;
+  width: 50%;
+  height: 5vw;
+}
+#navigation .RNav {
+  align-self: center;
+  color: white;
+  display: inline;
+  right: 0;
+  float: right;
+  width: 50%;
+  height: auto;
+  margin-top: 3.5vw;
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*    Right Navigation Elements   */
+/* ============================== */
+#navigation .RNav .links {
+  width: 25%;
+  text-align: center;
+}
+#navigation .RNav .links a {
+  text-align: center;
+  text-decoration: none;
+  /*font-weight: 800;*/
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5vw;
+  margin-left: 1vw;
+  font-family: 'Staatliches', cursive;
+  margin-right: 1vw;
+}
+#navigation .RNav .links a.selected {
+  color: rgba(255,255,255,1);
+  border-bottom-style: solid;
+  border-width: 0.5vh;
+  border-radius: 0.5vh;
+  border-color: #ffffff;
+}
+#navigation .RNav .links a:hover {
+  color: rgba(255,255,255,0.9);
+}
+/* Icons ======================== */
+#navigation .RNav .icons {
+  text-align: center;
+  content-align: center;
+  width: 25%;
+  padding-left: 2vw;
+}
+#navigation .RNav .icons i{
+  color: rgba(255,255,255,1);
+  font-size: 1.5vw;
+  margin-left: 2vw;
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*         LEFT NAVIGATION        */
+/* ============================== */
+#navigation .LNav .LogoImage {
+  width: auto;
+  margin-left: 25%;
+  margin-top: 1.8vw;
+  height: 5vw;
+}
+/* ============================== */
+
+
+
+/* ============================== */
+/*         WEBSITE CONTENT        */
+/* ============================== */
+#content {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+/* Title Blocks ================= */
+#content .about {
+  display: block;
+  margin-top: 1.3vw;
+  width: 100%;
+  text-align: center;
+}
+#content .about h2:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 80%;
+  margin-left: 10px;
+  border-radius: 0.2vw;
+  border-top: 5px solid var(--PrimaryColour);
+}
+#content .about h2 {
+  font-size: 1.8vw;
+  margin-left: 10px;
+  color: var(--PrimaryColour);
+  font-family: 'Staatliches', cursive;
+  font-weight: 200;
+}
+#content .about h3 {
+  font-size: 2.2vw;
+  margin-left: 5vw;
+  margin-top: 2vw;
+  font-family: 'Mukta', sans-serif;
+  background: -webkit-linear-gradient(#00A36C, #008458);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#content .about .squiggle {
+  background-image: url("/assets/img/large_squiggle.png");
+  background-position: 0.2em 1.3em;
+  background-size: 7vw auto;
+  background-repeat: no-repeat;
+}
+#content .about p {
+  font-size: 1.24vw;
+  margin-left: 5vw;
+  margin-top: 1.4vw;
+  color: var(--TextColour);
+  font-family: 'Mukta', sans-serif;
+}
+/* Products ===================== */
+/*#content .products {
+  position: relative;
+  display: block;
+  margin-top: 10vw;
+  top:0;
+  width: 100%;
+  text-align: center;
+}
+#content .products h2:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 80%;
+  margin-left: 10px;
+  border-radius: 0.2vw;
+  border-top: 5px solid var(--PrimaryColour);
+}
+#content .products h2 {
+  font-size: 1.8vw;
+  margin-left: 10px;
+  color: var(--PrimaryColour);
+  font-family: 'Staatliches', cursive;
+  font-weight: 200;
+}*/
+
+
+/* ============================== */
+/*          WEBSITE FOOTER        */
+/* ============================== */
+#footer {
+  display: block;
+  width: 100%;
+  bottom: 0;
+  height: 10vh;
+  background-color: var(--PrimaryColour);
+  border-top-style: solid;
+  border-width: 1.85vh;
+  border-color: var(--SecondaryColour);
+}
+#footer .text {
+  text-align: center;
+  color: #ffffff;
+  padding: 3vh 0;
+  font-size: 1.3vw;
+  font-family: 'Viga', sans-serif;
+}
+/* ============================== */
+
+.Positioner{
+  display: block;
+  clear: both;
+  width: 100%;
+}
+.PositionLeft {
+  display: inline;
+  float: left;
+  width: 50%;
+}
+.PositionRight {
+  display: inline;
+  right: 0;
+  float: right;
+  width: 50%;
+}
+
+
+/* ============================== */
+/*       VIEWPORT MANAGMENT       */
+/* ============================== */
+@media only screen and (max-width: 600px) {
+  #navigation .RNav {
+    display: none;
+  }
+  #navigation .LNav .LogoImage {
+    height: 15vw;
+    margin-top: 5vw;
+    margin-left: 50%;
+  }
+}
+/* ============================== */
