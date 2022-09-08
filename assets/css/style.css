@@ -299,6 +299,9 @@ html, body {
   font-size: 1.3vw;
   font-family: 'Viga', sans-serif;
 }
+#footer .text a:hover {
+  color: #ffffff;
+}
 /* ============================== */
 
 .Positioner{
